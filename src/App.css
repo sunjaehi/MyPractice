@@ -10,8 +10,8 @@ div {
   border-bottom: 1px solid grey;
 }
 .modal {
-  margin-top: 20px;
-  padding:20px;
+  margin-top: 5px;
+  padding:10px;
   background: #eee;
   text-align: left;
 }

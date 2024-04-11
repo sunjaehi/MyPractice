@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import styled from "styled-components";
-import footer from "./component/page/footer/footer";
-import header from "./component/page/header/header";
+import Footer from "./component/page/footer/Footer";
+import Header from "./component/page/header/Header";
 
 const Button=styled.button`
   display:flex;
@@ -25,7 +25,7 @@ function App() {
   return (
     <Wrapper>
       <div className="App">
-      <header />     
+      <Header />     
       
       <div className="list">
         <h4>{글제목[0]} <span onClick={() => {좋아요변경(좋아요+1)}}>👍</span> {좋아요} </h4>
@@ -44,7 +44,7 @@ function App() {
         copy[0]='여자 코트 추천';
         글제목변경(copy);
       }}>글수정</Button> 
-      <footer />
+      <Footer />
     </div>
     </Wrapper>
   );

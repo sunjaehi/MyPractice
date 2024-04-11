@@ -6,10 +6,12 @@ const Wrapper=styled.div`
     background :black;
     width:100%;
     color:white;
-    padding-left:20px;
+    padding:10px;
+    margin:3px;
+    font-size:20px;
 `;
 
-function header () {
+function Header () {
     return (
         <Wrapper>
             ReactBlog
@@ -17,4 +19,4 @@ function header () {
         
     );
 }
-export default header;
+export default Header;

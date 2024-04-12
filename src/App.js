@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import styled from "styled-components";
-import Footer from "./component/page/footer/Footer";
+//import Footer from './component/page/Footer/Footer';
 import Header from "./component/page/header/Header";
 
 const Button=styled.button`
@@ -44,7 +44,6 @@ function App() {
         copy[0]='여자 코트 추천';
         글제목변경(copy);
       }}>글수정</Button> 
-      <Footer />
     </div>
     </Wrapper>
   );

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import React from "react";
+import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
+import Notice from "../notice/Notice";
 
 const Wrapper=styled.div`
     display : flex;
@@ -14,7 +16,12 @@ const Wrapper=styled.div`
 function Header () {
     return (
         <Wrapper>
-            ReactBlog
+            <Link to="/notice">ReactBlog</Link>
+            <BrowserRouter>
+            <Routes>
+                <Route path="/notice" element={<Notice />} />
+            </Routes>
+            </BrowserRouter>
         </Wrapper>
         
     );

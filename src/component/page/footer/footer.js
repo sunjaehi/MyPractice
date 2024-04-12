@@ -20,7 +20,7 @@ function Footer () {
         <>
         <Link to="/notice">Notice</Link>
         <BrowserRouter>
-            <Routes.>
+            <Routes>
                 <Route path="/notice" element={<Notice />} />
             </Routes>
         </BrowserRouter>

@@ -6,7 +6,6 @@ import Notice from "./Notice";
 const Wrapper=styled.div`
     display : flex;
     background :black;
-    width:100%;
     color:white;
     padding:10px;
     margin:3px;

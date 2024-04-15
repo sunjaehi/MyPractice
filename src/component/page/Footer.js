@@ -19,6 +19,7 @@ const Liink=styled(Link)`
     margin-right:10px;
     cursor:pointer;
     text-decoration:none;
+    color: inherit;
 `;
 function Footer () {
     return (

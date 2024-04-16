@@ -26,6 +26,7 @@ function Footer () {
         <Wrapper>
             <Liink to="/">홈</Liink>
             <Liink to="Notice">공지사항</Liink>
+            <Liink to="Board">이용안내</Liink>
         </Wrapper>
     );
 }

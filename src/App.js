@@ -7,6 +7,7 @@ import Footer from './component/page/Footer';
 import Header from './component/page/Header';
 import Notice from './component/page/Notice';
 import Main from './component/page/Main';
+import Kakao from './component/Kakao';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <BrowserRouter>
     <Header />
     <Main />
+    <Kakao />
     <Footer />
     </BrowserRouter>
       

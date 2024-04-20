@@ -18,8 +18,8 @@ function Kakao() {
     return (
         <div id="map" style={{
             margin:'10px',
-            width:'300px',
-            height:'300px'
+            width:'200px',
+            height:'200px'
         }}></div>
     )
 }

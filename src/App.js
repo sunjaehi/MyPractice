@@ -15,10 +15,10 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    <Header />
-    <Main />
-    <Kakao />
-    <Footer />
+      <Header />
+      <Main />
+      <Kakao />
+      <Footer />
     </BrowserRouter>
       
     </>

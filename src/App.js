@@ -10,13 +10,13 @@ import Main from './component/page/Main';
 import Kakao from './component/Kakao';
 //import Kakao2 from './component/Kakao2';
 import Marker from './component/Marker';
-import Geolocation from '//component/Geolocation';
+//import Geolocation from '//component/Geolocation';
 
 function App() {
   
   return (
     <>
-    <Geolocation />
+      <Marker />
     </>
   );
 }

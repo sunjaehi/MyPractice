@@ -8,19 +8,15 @@ import Header from './component/page/Header';
 import Notice from './component/page/Notice';
 import Main from './component/page/Main';
 import Kakao from './component/Kakao';
-
+//import Kakao2 from './component/Kakao2';
+import Marker from './component/Marker';
+import Geolocation from '//component/Geolocation';
 
 function App() {
   
   return (
     <>
-    <BrowserRouter>
-      <Header />
-      <Main />
-      <Kakao />
-      <Footer />
-    </BrowserRouter>
-      
+    <Geolocation />
     </>
   );
 }

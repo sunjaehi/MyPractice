@@ -160,6 +160,15 @@ function KaKao() {
             el.removeChild (el.lastChild);
         }
 }
+    return (
+        <div
+            id="map"
+            style={{
+                width: '300px',
+                height:'300px',
+            }}>
+        </div>
+    )
 
 }
 export default KaKao;

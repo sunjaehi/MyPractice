@@ -11,21 +11,35 @@ function Marker() {
         let mapContainer=document.getElementById('map'),
             mapOption = {
                 center : new kakao.maps.LatLng(37.5029087190,127.0377563750),
-                level:5
+                level:3
             };
         
         const map=new kakao.maps.Map(mapContainer,mapOption);
         const imageSrc="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+        /*
+        for (var i=0; i<sample.length; i++) {
+            const imageSize=new kakao.maps.Size(24,35);
+            const markerImage=new kakao.maps.MarkerImage(imageSrc,imageSize);
+            new kakao.maps.Marker({
+                map:map,
+                position:sample[i].latlng,
+                name:sample[i].name,
+                image:markerImage
+            });
+        }
+        */
+        
         sample.forEach((ac) => {
             const imageSize=new kakao.maps.Size(24,35);
             const markerImage=new kakao.maps.MarkerImage(imageSrc,imageSize);
             new kakao.maps.Marker({
                 map:map,
                 position:new kakao.maps.LatLng(ac.longitude, ac.latitude),
-                name:ac.name,
+                title:ac.name,
                 image:markerImage
             });
         });
+        
     };
     return <div id="map" style={{width:"500px",height:"500px"}}></div>;
 }

@@ -23,7 +23,7 @@ function Geo() {
     });
     const [level, setLevel]=useState(5);
     const [address, setAdress]=useState(null);
-    const [coodinates, setCoordinates]=useState(null);
+    const [coordinates, setCoordinates]=useState(null);
     const mapRef=useRef();
 
     const getCoordinates = () => {
@@ -112,6 +112,13 @@ function Geo() {
                     <p>region_1depth_name: {address.region_1depth_name}</p>
                     <p>region_2depth_name: {address.region_2depth_name}</p>
                     <p>region_3depth_name: {address.region_3depth_name}</p>
+                </div>
+            )}
+            {coordinates && (
+                <div>
+                    현재 위치의 좌표는..
+                    <p>위도 : {coordinates.center.lat}</p>
+                    <p>경도 : {coordinates.center.lng}</p>
                 </div>
             )}
             

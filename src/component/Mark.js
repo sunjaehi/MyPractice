@@ -1,7 +1,11 @@
 import React, {useState,useEffect,useRef} from "react";
 import '../App.css';
 import { sample } from "../data/sample";
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import {Map,MapMarker,CustomOverlayMap} from 'react-kakao-maps-sdk';
+
 const {kakao} = window;
 
 function Mark() {
@@ -31,7 +35,15 @@ function Mark() {
                     title={position.tite}
                     />
             ))}
+            <Button 
+                component="label"
+                role={undefined}
+                variant="contained"
+                tabIndex={-1}
+                startIcon={<CloudUploadIcon />}
+            ></Button>
         </Map>
+        
     );
 
 }

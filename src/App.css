@@ -8,13 +8,26 @@ div {
 .map {
   margin: 10px;
 }
-button {
+#btn {
   margin: 5px;
   border-radius: 5px;
   border: none;
   position:relative;
   display: inline-block;
   text-align: center;
+  cursor:pointer;
+}
+#btn:hover {
+  background-color: gray;
+  transform: translateY(-3px);
+  
+}
+#className {
+  margin: 10px;
+
+}
+#wrap {
+  color:gray;
 
 }
 .list {

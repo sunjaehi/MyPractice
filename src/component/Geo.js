@@ -94,14 +94,27 @@ function Geo() {
                 level={level}
                 ref={mapRef}
             >
-                <MapMarker position={{lat:37.5029087190, lng:127.0377563750 }}></MapMarker>
+                
                 <button onClick={getCoordinates}>현재 위치 좌표 얻기</button>
                 <CustomOverlayMap position={state.center}>
                     <div className="overlay">Here!</div>
                 </CustomOverlayMap>
                 <button onClick={()=>setLevel(level - 1)}>-</button>
                 <button onClick={()=>setLevel(level + 1)}>+</button>
-                
+                {sample.map((position)=> (
+                <MapMarker
+                    key={`${position.id}`}
+                    position={position.latlng}
+                    image={{
+                        src: "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png",
+                        size: {
+                            width:24,
+                            height:35
+                        },
+                    }}
+                    title={position.tite}
+                    />
+            ))}
                 {!state.isLoading && (
                     <MapMarker position={state.center}>
                         <div style={{padding:"5px", color:"#000"}}>

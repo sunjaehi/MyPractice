@@ -12,13 +12,14 @@ import Kakao from './component/Kakao';
 import Marker from './component/Marker';
 //import Geolocation from '//component/Geolocation';
 import Geo from './component/Geo';
+import Mark from './component/Mark';
 
 function App() {
   
   return (
     <>
       <Geo />
-      <Marker />
+      
     </>
   );
 }

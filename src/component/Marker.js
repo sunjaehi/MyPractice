@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { sample } from "../data/sample";
-import KaKao from "./Kakao";
+import '../App.css';
 const {kakao} = window;
 
 function Marker() {
@@ -41,7 +41,7 @@ function Marker() {
         });
         
     };
-    return <div id="map" style={{width:"500px",height:"500px"}}></div>;
+    return <div id="map" style={{width:"300px",height:"300px"}}></div>;
 }
 export default Marker;
     

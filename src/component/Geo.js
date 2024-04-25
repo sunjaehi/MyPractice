@@ -1,5 +1,6 @@
 import React, {useState,useEffect,useRef} from "react";
 import '../App.css';
+import { sample } from "../data/sample";
 import {Map,MapMarker,CustomOverlayMap} from 'react-kakao-maps-sdk';
 const {kakao} = window;
 
@@ -22,7 +23,7 @@ function Geo() {
         isLoading: true,
     });
     const [level, setLevel]=useState(5);
-    const [address, setAdress]=useState(null);
+    //const [address, setAdress]=useState(null);
     const [coordinates, setCoordinates]=useState(null);
     const mapRef=useRef();
 
@@ -35,17 +36,6 @@ function Geo() {
                 lng:map.getCenter().getLng(),
             },
         });
-    };
-
-    const getAdress = (lat,lng) => {
-        const geocoder = new kakao.maps.services.Geocoder(); //좌표 -> 주소로
-        const coord = new kakao.maps.LatLng(37.5029087190,127.0377563750);
-        const callback = function(result, status) {
-            if (status === kakao.maps.services.Status.OK) {
-                setAdress(result[0].address);
-            }
-        };
-        geocoder.coord2Address(coord.getLng, coord.getLat, callback);
     };
     useEffect (() => {
         if (navigator.geolocation) {
@@ -75,7 +65,23 @@ function Geo() {
                 isLoading:false,
             }))
         }
-    },[])
+        
+    },[]);
+    /*
+     {positions.map((position, index) => (
+        <MapMarker
+          key={`${position.title}-${position.latlng}`}
+          position={position.latlng} // 마커를 표시할 위치
+          image={{
+            src: "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png", // 마커이미지의 주소입니다
+            size: {
+              width: 24,
+              height: 35
+            }, // 마커이미지의 크기입니다
+          }}
+    */
+
+    
     return (
         <>
             <Map
@@ -95,25 +101,16 @@ function Geo() {
                 </CustomOverlayMap>
                 <button onClick={()=>setLevel(level - 1)}>-</button>
                 <button onClick={()=>setLevel(level + 1)}>+</button>
-                <button onClick={getAdress}>현재 좌표의 주소 얻기</button>
+                
                 {!state.isLoading && (
                     <MapMarker position={state.center}>
                         <div style={{padding:"5px", color:"#000"}}>
                             {state.errMsg ? state.errMsg:"여기에 계신가요?"}
                         </div>
-                        
                     </MapMarker>
                 )}
+
             </Map>
-            {address && (
-                <div>
-                    현재 좌표의 주소는..
-                    <p>address_name: {address.adress_name}</p>
-                    <p>region_1depth_name: {address.region_1depth_name}</p>
-                    <p>region_2depth_name: {address.region_2depth_name}</p>
-                    <p>region_3depth_name: {address.region_3depth_name}</p>
-                </div>
-            )}
             {coordinates && (
                 <div>
                     현재 위치의 좌표는..

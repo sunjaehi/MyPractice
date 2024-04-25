@@ -5,11 +5,17 @@
 div {
   box-sizing: border-box;
 }
+.map {
+  margin: 10px;
+}
 button {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px;
   border-radius: 5px;
   border: none;
+  position:relative;
+  display: inline-block;
+  text-align: center;
+
 }
 .list {
   padding-left: 20px;

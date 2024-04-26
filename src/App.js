@@ -8,17 +8,18 @@ import Header from './component/page/Header';
 import Notice from './component/page/Notice';
 import Main from './component/page/Main';
 import Kakao from './component/Kakao';
-import Search from './component/Serach';
+import Search from './component/Search';
 import Marker from './component/Marker';
 //import Geolocation from '//component/Geolocation';
 import Geo from './component/Geo';
 import Mark from './component/Mark';
+import Geolocation from './component/Geolocation';
 
 function App() {
   
   return (
     <>
-      <Notice />
+      <Geolocation />
       
     </>
   );

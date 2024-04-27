@@ -10,16 +10,18 @@ import SendIcon from '@mui/icons-material/Send';
 //import Stack from '@mui/material/Stack';
 import { regionResponse } from '../data/regionResponse';
 
-
-
 function Kakao() {
     const [distance,setDistance] = useState('');
-    const handleChange= (event)=> {
+    const handleChange = (event)=> {
         setDistance(event.target.value);
     }
+    
     return (
         <Box sx={{margin:"10px"}}>
-            <FormControl sx={{m:1, minWidth:120}}>
+            <FormControl 
+                sx={{m:1, minWidth:120}}
+                
+            >
                 <InputLabel id="demo-simple-select-helper-label">검색할 지역구</InputLabel>
                 <Select
                     labelId='demo-simple-select-helper-label'
@@ -30,16 +32,24 @@ function Kakao() {
                 >
                     {regionResponse.map((region)=> (
                         <MenuItem
-                            id={`${region.id}`}
+                            value={`${region.id}`}
                         >{`${region.name}`}</MenuItem>
                     ))}
                 </Select>
                 <FormHelperText>지역을 설정해주세요</FormHelperText>
             </FormControl>
-            <Button sx={{margin:"10px"}} variant='outlined' size="small" endIcon={<SendIcon />}>
+            <Button 
+                sx={{mt:"20px"}}
+                variant='outlined'
+                size="small" 
+                endIcon={<SendIcon />}
+                type="submit"
+            >
                 Send
             </Button>
+            
         </Box>
+        
     );
 }
 export default Kakao;

@@ -18,10 +18,10 @@ import Geolocation from './component/Geolocation';
 function App() {
   
   return (
-    <>
-      <Kakao />
+    <BrowserRouter>
+      <Header />
       
-    </>
+    </BrowserRouter>
   );
 }
 
